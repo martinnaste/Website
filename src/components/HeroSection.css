@@ -1,0 +1,118 @@
+.container {
+  border-bottom: 2px solid #00aeff;
+  height: 95vh;
+  overflow: hidden;
+}
+
+.container > img.bg  {
+  object-fit: cover;
+  width: 100vw;
+  height: 95%;
+  position: fixed;
+  z-index: -2;
+}
+
+.snow-container {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.flake {
+  color: rgb(247, 252, 243);
+  font-size: 2rem;
+  padding: 1rem;
+  animation: fall linear forwards infinite;
+  z-index: -1;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(95vh);
+    opacity: 0%;
+  }
+} 
+
+.heading {
+  color: #fff;
+  font-size: 120px;
+  margin-top: 8vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.subheading {
+  margin-top: 8px;
+  padding-top: 3rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 56px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  z-index: 1;
+  position: relative;
+}
+
+#info {
+  margin-top: 8px;
+  padding-top: 5rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  z-index: 1;
+}
+
+#icon-fewd {
+  padding-left: 2rem;
+  padding-top: 10px;
+}
+
+#icon-be {
+  padding-left: 2rem;
+  padding-top: 10px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.btn {
+  background: #fff;
+  color: #242424;
+  font-size: 20px;
+  padding: 12px 25px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-bottom: 4px solid #00aeff;
+  transition: all 0.2s ease-out;
+}
+
+.ship-container > img.ship{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  cursor: pointer;
+}
