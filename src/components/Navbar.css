@@ -82,15 +82,26 @@
     display: none;
   }
 
-  .btn-ln {
+  .btn-li {
+    font-size: 40px;
+    color: #fff;
+    margin-right: 12px;
+  }
+
+  .btn-gh {
     font-size: 40px;
     color: #fff;
   }
 
-  .btn-ln:hover {
+  .btn-li:hover {
     color: #0077B5;
     transition: all 0.3s ease-out;
-}
+  }
+
+  .btn-gh:hover {
+    color: #00aeff;
+    transition: all 0.3s ease-out;
+  }
   
   @media screen and (max-width: 960px) {
     .NavbarItems {
@@ -107,6 +118,12 @@
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
+    }
+
+    .btn-li {
+      font-size: 40px;
+      color: #fff;
+      margin-right: 0px;
     }
   
     .nav-menu.active {

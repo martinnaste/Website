@@ -15,13 +15,13 @@ function Footer() {
                         <p className="footer-text">
                             Contact me via LinkedIn
                         </p>
-                        <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' rel="noreferrer"><i id='text-icon'className='fab fa-linkedin'></i></a>
+                        <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' rel="noreferrer"><i id='text-icon-linkedin'className='fab fa-linkedin'/></a>
                     </div>
                     <div className='text'>
                         <p className="footer-text">
-                            Have a look at my GitHub
+                            Have a look at the GitHub repo for this site!
                         </p>
-                        <a target="_blank" href='https://github.com/martinnaste/' rel="noreferrer"><i id='text-icon'className='fab fa-github'></i></a>
+                        <a target="_blank" href='https://github.com/martinnaste/website' rel="noreferrer"><i id='text-icon-github' className='fab fa-github'/></a>
                     </div>
                 </div>
             </div>

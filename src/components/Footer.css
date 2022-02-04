@@ -25,11 +25,25 @@
     font-size: 20px;
 }
 
-#text-icon {
+#text-icon-linkedin {
     margin-left: 12px;
     color: #fff;
 }
 
+#text-icon-github {
+    margin-left: 12px;
+    color: #fff;
+}
+
+#text-icon-linkedin:hover {
+    color: #0077B5;
+    transition: all 0.3s ease-out;
+}
+
+#text-icon-github:hover {
+    color: #00aeff;
+    transition: all 0.3s ease-out;
+}
 
 .contact-container {
     display: flex;
@@ -46,10 +60,6 @@
     }
 
     .footer-input {
-        width: 100%;
-    }
-
-    .btn {
         width: 100%;
     }
 

@@ -5,6 +5,7 @@ import './Cards.css'
 function Cards() {
     return (
         <div className='cards'>
+            <div id='projects'></div>
             <h1>My Projects</h1>
             <div className='cards-container'>
                 <div className='cards-wrapper'>
@@ -19,7 +20,7 @@ function Cards() {
                         <CardItem 
                             src={require('../assets/images/colour-search/colour-search1.png')}
                             text='Colour Search'
-                            tags='Javascript React HTML CSS'
+                            tags='JavaScript React HTML CSS'
                             info='Playing with React and implementing complex maths to show colours related to what I have typed into the search bar'
                             path='/'
                         />
@@ -44,7 +45,7 @@ function Cards() {
                         <CardItem 
                             src={require('../assets/images/replit-logo.png')} 
                             text='Discord Bot'
-                            tags='Javascript'
+                            tags='JavaScript'
                             info='A bot which goes through a list of twitter users every 20 minutes and posts to my own discord if they are following somebody new'
                             path='/'
                         />

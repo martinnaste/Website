@@ -33,7 +33,7 @@ function HeroSection() {
   window.addEventListener('resize', showItems);
 
   return (
-    <div className='container'>
+    <div className='hero-container'>
       <img className='bg' src={require("../assets/images/background.png")} alt='MN'/>
       <div id='/' className="snow-container">
         {/* randomly selecting an icon as the classname for the flake, from the ICONLIST list */}

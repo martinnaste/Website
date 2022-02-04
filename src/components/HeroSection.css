@@ -1,10 +1,10 @@
-.container {
+.hero-container {
   border-bottom: 2px solid #00aeff;
   height: 95vh;
   overflow: hidden;
 }
 
-.container > img.bg  {
+.hero-container > img.bg  {
   object-fit: cover;
   width: 100vw;
   height: 95%;

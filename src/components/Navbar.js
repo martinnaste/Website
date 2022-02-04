@@ -45,21 +45,21 @@ function Navbar() {
                             </a>
                         </li>
                         <li className='nav-item'>
-                            <a href='#tech' className='nav-links' onClick={closeMobileMenu}>
-                                Technologies
-                            </a>
-                        </li>
-                        <li className='nav-item'>
                             <a href='#about' className='nav-links' onClick={closeMobileMenu}>
-                                About
+                                About Me
                             </a>
                         </li> 
                         {!button && 
                         <li className='nav-item'>
-                            <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' className='btn-ln' rel="noreferrer"><i className='fab fa-linkedin' /></a>
+                            <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' className='btn-li' rel="noreferrer"><i className='fab fa-linkedin' /></a>
                         </li>} 
+                        {!button && 
+                        <li className='nav-item'>
+                            <a target="_blank" href='https://github.com/martinnaste/' className='btn-gh' rel="noreferrer"><i className='fab fa-github' /></a>
+                        </li>}
                     </ul>
-                    {button && <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' className='btn-ln' rel="noreferrer"><i className='fab fa-linkedin' /></a>}
+                    {button && <a target="_blank" href='https://www.linkedin.com/in/martin-nastevski/' className='btn-li' rel="noreferrer"><i className='fab fa-linkedin' /></a>}
+                    {button && <a target="_blank" href='https://github.com/martinnaste/' className='btn-gh' rel="noreferrer"><i className='fab fa-github' /></a>} 
                 </div>
             </nav>
         </>
