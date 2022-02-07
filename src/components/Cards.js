@@ -22,7 +22,7 @@ function Cards() {
                             text='Colour Search'
                             tags='JavaScript React HTML CSS'
                             info='Playing with React and implementing complex maths to show colours related to what I have typed into the search bar'
-                            path='/'
+                            path='https://github.com/martinnaste/colour-search'
                         />
                     </ul>
                     <ul className='cards-items'>
@@ -53,9 +53,12 @@ function Cards() {
                             src={require('../assets/images/ai-agent/threechess1.png')}
                             text='AI and Agent Uni Project'
                             tags='Java'
-                            info='Artifical Intelligence and Agents project for University where I implemented a Monte Carlo algorithm for an agent to play ThreeChess'
+                            info='Artifical Intelligence and Agents project for University where I implemented the Monte Carlo algorithm for an agent to play ThreeChess'
                             path='/'
                         />
+                    </ul>
+                    <ul>
+                        <h1 className='card-footer'>Ask me about my private repositories!</h1>
                     </ul>
                 </div>
             </div>
