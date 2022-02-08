@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
 import '../App.css';
 import './HeroSection.css';
 
@@ -33,8 +34,8 @@ function HeroSection() {
   window.addEventListener('resize', showItems);
 
   return (
-    <div className='hero-container'>
-      <img className='bg' src={require("../assets/images/background.png")} alt='MN'/>
+    <div id='hero-con' className='hero-container'>
+      {/* <img className='bg' src={require("../assets/images/background.png")} alt='MN'/> */}
       <div id='/' className="snow-container">
         {/* randomly selecting an icon as the classname for the flake, from the ICONLIST list */}
         <i className={`${ICONLIST[Math.floor(Math.random() * ICONLIST.length)]} flake`} style={{...myStyle}}></i>
@@ -50,10 +51,18 @@ function HeroSection() {
         <a className='btn' href='#projects'>Projects</a>
       </div>
       {showShip && <div className='ship-container'>
-        <img className='ship' src={require("../assets/images/ship.png")} alt='ship' onClick={"PLAY"}></img>
+        <img className='ship' src={require("../assets/images/ship.png")} alt='ship' onClick={play}></img>
       </div> }
     </div>
   );
+}
+
+const play = () => {
+  //This is where I will be implementing [REDACTED]
+  toast.info("You found [REDACTED]... Stay tuned for something fun!", {
+    className: 'toast',
+    icon: "🕵️"
+  });
 }
 
 function createFlake() {
