@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -40,14 +41,14 @@ function Navbar() {
                             </a>
                         </li>
                         <li className='nav-item'>
-                            <a href='#projects' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/' && <a href='/#projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
-                            </a>
+                            </a>}
                         </li>
                         <li className='nav-item'>
-                            <a href='#about' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/' && <a href='/#about' className='nav-links' onClick={closeMobileMenu}>
                                 About Me
-                            </a>
+                            </a>}
                         </li> 
                         {!button && 
                         <li className='nav-item'>

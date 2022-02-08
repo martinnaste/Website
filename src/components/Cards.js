@@ -15,7 +15,7 @@ function Cards() {
                             text='Capstone'
                             tags='Flutter Dart Firebase'
                             info='Capstone unit during final year of University where myself and a team of students built an app for the Head of Respiratory at Sir Charles Gairdner Hospital'
-                            path='/'
+                            path='/capstone'
                         />
                         <CardItem 
                             src={require('../assets/images/colour-search/colour-search1.png')}

@@ -80,10 +80,14 @@ if(window.innerWidth <= 960){
 } else {
   rate = 100;
 }
-const s = setInterval(createFlake, rate);
 
-setTimeout(() => {
-  clearInterval(s);
-}, 3000); // flake creation stops after 3000 milliseconds or 3s
+const pathname = window.location.pathname
+if(pathname === '/'){
+  const s = setInterval(createFlake, rate);
+
+  setTimeout(() => {
+    clearInterval(s);
+  }, 3000); // flake creation stops after 3000 milliseconds or 3s
+}
 
 export default HeroSection;
