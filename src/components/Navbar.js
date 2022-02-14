@@ -22,8 +22,6 @@ function Navbar() {
         showButton();
     }, [])
 
-    console.log(window.location.pathname);
-
     window.addEventListener('resize', showButton);
 
     return (
@@ -31,7 +29,6 @@ function Navbar() {
             <nav className='navbar' id='hero'>
                 <div className='navbar-container'>
                     <a href={useLocation().pathname !== '/website/' ? 'website' : '#'} onClick={closeMobileMenu}>
-                        {console.log("UL: ", useLocation().pathname)}
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
                     <div className='menu-icon' onClick={handleClick}>
