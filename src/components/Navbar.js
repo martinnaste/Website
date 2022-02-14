@@ -43,12 +43,12 @@ function Navbar() {
                             </a>
                         </li>
                         <li className='nav-item'>
-                            {useLocation().pathname === '/website' && <a href='#projects' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/website/' && <a href='#projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
                             </a>}
                         </li>
                         <li className='nav-item'>
-                            {useLocation().pathname === '/website' && <a href='#about' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/website/' && <a href='#about' className='nav-links' onClick={closeMobileMenu}>
                                 About Me
                             </a>}
                         </li> 
