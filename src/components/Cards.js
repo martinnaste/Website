@@ -31,7 +31,7 @@ function Cards() {
                             text='Client Server Uni Project'
                             tags='Python'
                             info='Client/Server game for a project at University where I handle errors and gameplay mechanics based on disconnects, reconnects and a queue of players'
-                            path='/'
+                            // path='/'
                         />
                         <CardItem 
                             src={require('../assets/images/metamask-logo.png')}
