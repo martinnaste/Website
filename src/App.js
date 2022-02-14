@@ -16,8 +16,8 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <Routes>
-          <Route path='/' exact element={<Home/>} />
-          <Route path='/capstone' element={<Capstone />} />
+          <Route path='/website' exact element={<Home/>} />
+          <Route path='/website/capstone' element={<Capstone />} />
         </Routes>
         <ToastContainer limit={6} />
         <Footer />
