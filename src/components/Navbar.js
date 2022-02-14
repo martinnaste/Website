@@ -22,13 +22,15 @@ function Navbar() {
         showButton();
     }, [])
 
+    console.log(window.location.pathname);
+
     window.addEventListener('resize', showButton);
 
     return (
         <>
             <nav className='navbar' id='hero'>
                 <div className='navbar-container'>
-                    <a href='/' onClick={closeMobileMenu}>
+                    <a href='/#' onClick={closeMobileMenu}>
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
                     <div className='menu-icon' onClick={handleClick}>
@@ -36,7 +38,7 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <a href='/' className='nav-links' onClick={closeMobileMenu}>
+                            <a href='/#' className='nav-links' onClick={closeMobileMenu}>
                                 Home
                             </a>
                         </li>
