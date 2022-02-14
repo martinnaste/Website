@@ -36,7 +36,7 @@ function HeroSection() {
   return (
     <div id='hero-con' className='hero-container'>
       {/* <img className='bg' src={require("../assets/images/background.png")} alt='MN'/> */}
-      <div id='/' className="snow-container">
+      <div id='website/' className="snow-container">
         {/* randomly selecting an icon as the classname for the flake, from the ICONLIST list */}
         <i className={`${ICONLIST[Math.floor(Math.random() * ICONLIST.length)]} flake`} style={{...myStyle}}></i>
       </div>

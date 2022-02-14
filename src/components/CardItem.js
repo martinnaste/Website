@@ -11,7 +11,7 @@ function CardItem(props) {
     const linkType = () => {
         if (props.path.includes('http')){
             setLink(1);
-        } else if(props.path === '/') {
+        } else if(props.path === 'website/') {
             setLink(2);
         } else {
             setLink(0);
