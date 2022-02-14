@@ -31,14 +31,14 @@ function Cards() {
                             text='Client Server Uni Project'
                             tags='Python'
                             info='Client/Server game for a project at University where I handle errors and gameplay mechanics based on disconnects, reconnects and a queue of players'
-                            // path='/'
+                            path=''
                         />
                         <CardItem 
                             src={require('../assets/images/metamask-logo.png')}
                             text='Web3.0'
                             tags='...Site coming soon'
                             info='A simple website to display a collection of Crypto Assets'
-                            path='/'
+                            path=''
                         />
                     </ul>
                     <ul className='cards-items'>
@@ -47,14 +47,14 @@ function Cards() {
                             text='Discord Bot'
                             tags='JavaScript'
                             info='A bot which goes through a list of twitter users every 20 minutes and posts to my own discord if they are following somebody new'
-                            path='/'
+                            path=''
                         />
                         <CardItem 
                             src={require('../assets/images/ai-agent/threechess1.png')}
                             text='AI and Agent Uni Project'
                             tags='Java'
                             info='Artifical Intelligence and Agents project for University where I implemented the Monte Carlo algorithm for an agent to play ThreeChess'
-                            path='/'
+                            path=''
                         />
                     </ul>
                     <ul>
