@@ -12,7 +12,7 @@ function CardItem(props) {
         if (props.path.includes('http')){
             console.log("http ", props.path)
             setLink(1);
-        } else if(props.path === 'website/') {
+        } else if(props.path === '') {
             console.log("website/ ", props.path)
             setLink(2);
         } else {
