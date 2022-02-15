@@ -28,7 +28,6 @@ function Navbar() {
         <>
             <nav className='navbar' id='hero'>
                 <div className='navbar-container'>
-                    {/* href={useLocation().pathname !== '/website/' ? 'website' : '#'} */}
                     <a href={useLocation().pathname !== '/' ? '/' : '#'} onClick={closeMobileMenu}>
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
