@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.93f058cb.css",
-    "main.js": "/website/static/js/main.b6a9debd.js",
-    "static/media/capstone5.png": "/website/static/media/capstone5.3f64525caed2a1aaabc8.png",
-    "static/media/capstone4.png": "/website/static/media/capstone4.26855b8d670e0280d869.png",
-    "static/media/threechess1.png": "/website/static/media/threechess1.eaa05a95d102c4e4e5fb.png",
-    "static/media/capstone6.png": "/website/static/media/capstone6.cfdc42f58d9a640c60a9.png",
-    "static/media/capstone2.png": "/website/static/media/capstone2.4e00a9d26a936b2b8580.png",
-    "static/media/metamask-logo.png": "/website/static/media/metamask-logo.4f06ed22a21c26d9a0ce.png",
-    "static/media/capstone7.png": "/website/static/media/capstone7.3d15fd7b449247837364.png",
-    "static/media/capstone1.png": "/website/static/media/capstone1.c2280687937b4ed44d72.png",
-    "static/media/capstone3.png": "/website/static/media/capstone3.f99d3e716099a2f67d43.png",
-    "static/media/replit-logo.png": "/website/static/media/replit-logo.028616df58908d7fc1dd.png",
-    "static/media/MNpx2.png": "/website/static/media/MNpx2.2069e9b4fc76b9913c37.png",
-    "static/media/colour-search1.png": "/website/static/media/colour-search1.f793ae0cdf5f0206b990.png",
-    "static/media/serv-cli1.png": "/website/static/media/serv-cli1.b0b731473731afaa3573.png",
-    "static/media/fluttericon.png": "/website/static/media/fluttericon.544bc95df5fb53b3d5da.png",
-    "index.html": "/website/index.html",
-    "main.93f058cb.css.map": "/website/static/css/main.93f058cb.css.map",
-    "main.b6a9debd.js.map": "/website/static/js/main.b6a9debd.js.map"
+    "main.css": "/static/css/main.93f058cb.css",
+    "main.js": "/static/js/main.e4751894.js",
+    "static/media/capstone5.png": "/static/media/capstone5.3f64525caed2a1aaabc8.png",
+    "static/media/capstone4.png": "/static/media/capstone4.26855b8d670e0280d869.png",
+    "static/media/threechess1.png": "/static/media/threechess1.eaa05a95d102c4e4e5fb.png",
+    "static/media/capstone6.png": "/static/media/capstone6.cfdc42f58d9a640c60a9.png",
+    "static/media/capstone2.png": "/static/media/capstone2.4e00a9d26a936b2b8580.png",
+    "static/media/metamask-logo.png": "/static/media/metamask-logo.4f06ed22a21c26d9a0ce.png",
+    "static/media/capstone7.png": "/static/media/capstone7.3d15fd7b449247837364.png",
+    "static/media/capstone1.png": "/static/media/capstone1.c2280687937b4ed44d72.png",
+    "static/media/capstone3.png": "/static/media/capstone3.f99d3e716099a2f67d43.png",
+    "static/media/replit-logo.png": "/static/media/replit-logo.028616df58908d7fc1dd.png",
+    "static/media/MNpx2.png": "/static/media/MNpx2.2069e9b4fc76b9913c37.png",
+    "static/media/colour-search1.png": "/static/media/colour-search1.f793ae0cdf5f0206b990.png",
+    "static/media/serv-cli1.png": "/static/media/serv-cli1.b0b731473731afaa3573.png",
+    "static/media/fluttericon.png": "/static/media/fluttericon.544bc95df5fb53b3d5da.png",
+    "index.html": "/index.html",
+    "main.93f058cb.css.map": "/static/css/main.93f058cb.css.map",
+    "main.e4751894.js.map": "/static/js/main.e4751894.js.map"
   },
   "entrypoints": [
     "static/css/main.93f058cb.css",
-    "static/js/main.b6a9debd.js"
+    "static/js/main.e4751894.js"
   ]
 }
