@@ -29,21 +29,21 @@ function Capstone() {
                           text='Welcome page'
                           tags=''
                           info='The sign in and sign up buttons.'
-                          path='none'
+                          path=''
                       />
                       <CardItem 
                           src={require('../../assets/images/capstone/capstone2.png')} 
                           text='Main page'
                           tags=''
                           info='The calender, and some of the options available on that page including creating a new event, and picking some viewing options.'
-                          path='none'
+                          path=''
                       />
                       <CardItem 
                           src={require('../../assets/images/capstone/capstone3.png')} 
                           text='New event page'
                           tags=''
                           info='This is where the user is sent after clicking the plus button on the main page. They can input an event title and a date which will go into the calendar ont he main page.'
-                          path='none'
+                          path=''
                       />
                     </ul>
                     <ul className='cards-items'>
@@ -52,14 +52,14 @@ function Capstone() {
                           text='Forms page and record an event page'
                           tags=''
                           info='This is where the user can fill out forms which are custom set by their doctor using the web app.'
-                          path='none'
+                          path=''
                       />
                       <CardItem 
                           src={require('../../assets/images/capstone/capstone5.png')} 
                           text='User profile page'
                           tags=''
                           info='The user will have to create a user profile and have the ability to fill out some health information there which their doctor can see. This was also done to give the app more of a personable feel.'
-                          path='none'
+                          path=''
                       />
                     </ul>
                     <ul className='cards-items'>
@@ -68,14 +68,14 @@ function Capstone() {
                           text='Help page'
                           tags=''
                           info='From the main page the user has quick access to the help page, to either contact their clinician, or record a new event (asthma attack).'
-                          path='none'
+                          path=''
                       />
                       <CardItem 
                           src={require('../../assets/images/capstone/capstone7.png')} 
                           text='Email your clinician'
                           tags=''
                           info='The user can click on the help button on the main page to get to his page where they can send an email to their doctor via the app and their linked email account.'
-                          path='none'
+                          path=''
                       />
                     </ul>
                 </div>

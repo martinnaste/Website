@@ -23,10 +23,12 @@ function CardItem(props) {
     });
 
     const handleClick = () => {
-        if(!toast.isActive(toastId.current)){
-            toastId.current = toast.info("This repo is private, feel free to ask me about it!", {
-                className: 'toast'
-            });
+        if(window.location.pathname !== '/capstone'){
+            if(!toast.isActive(toastId.current)){
+                toastId.current = toast.info("This repo is private, feel free to ask me about it!", {
+                    className: 'toast'
+                });
+            }
         }
     }
 
@@ -70,7 +72,7 @@ function CardItem(props) {
                 </a> 
                 }
                 {link === 2 &&
-                <button className='cards-link-button' onClick={props.path === 'none' ? '' : handleClick}>
+                <button className='cards-link-button' onClick={handleClick}>
                     <figure className='item-img-wrap'>
                         <img className='item-img' src={props.src} alt='Project pic'/>
                     </figure>
