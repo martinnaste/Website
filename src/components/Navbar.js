@@ -28,7 +28,8 @@ function Navbar() {
         <>
             <nav className='navbar' id='hero'>
                 <div className='navbar-container'>
-                    <a href={useLocation().pathname !== '/website/' ? 'website' : '#'} onClick={closeMobileMenu}>
+                    {/* href={useLocation().pathname !== '/website/' ? 'website' : '#'} */}
+                    <a href='#' onClick={closeMobileMenu}>
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
                     <div className='menu-icon' onClick={handleClick}>
@@ -36,17 +37,17 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <a href={useLocation().pathname !== '/website/' ? 'website' : '#'} className='nav-links' onClick={closeMobileMenu}>
+                            <a href='#' className='nav-links' onClick={closeMobileMenu}>
                                 Home
                             </a>
                         </li>
                         <li className='nav-item'>
-                            {useLocation().pathname === '/website/' && <a href='#projects' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/' && <a href='#projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
                             </a>}
                         </li>
                         <li className='nav-item'>
-                            {useLocation().pathname === '/website/' && <a href='#about' className='nav-links' onClick={closeMobileMenu}>
+                            {useLocation().pathname === '/' && <a href='#about' className='nav-links' onClick={closeMobileMenu}>
                                 About Me
                             </a>}
                         </li> 

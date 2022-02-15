@@ -7,7 +7,7 @@ function Footer() {
         <div className='footer-container'>
             <div className='contact-container'>
                 <div>
-                    <a href={useLocation().pathname !== '/website/' ? 'website' : '#'}>
+                    <a href='#'>
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
                 </div>
