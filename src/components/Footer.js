@@ -22,7 +22,7 @@ function Footer() {
                         <p className="footer-text">
                             Have a look at the GitHub repo for this site!
                         </p>
-                        <a target="_blank" href='https://github.com/martinnaste/website' rel="noreferrer"><i id='text-icon-github' className='fab fa-github'/></a>
+                        <a target="_blank" href='https://github.com/martinnaste/martinnaste.github.io' rel="noreferrer"><i id='text-icon-github' className='fab fa-github'/></a>
                     </div>
                 </div>
             </div>
