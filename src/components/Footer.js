@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLocation } from 'react'
 import './Footer.css';
 
 function Footer() {
@@ -6,7 +6,7 @@ function Footer() {
         <div className='footer-container'>
             <div className='contact-container'>
                 <div>
-                    <a href='/#'>
+                    <a href={useLocation().pathname !== '/website/' ? 'website' : '#'}>
                         <img height="120px" src={require("../assets/images/MNpx2.png")} className='img1' alt='MN'/>
                     </a>
                 </div>
