@@ -42,7 +42,7 @@ function Capstone() {
                           src={require('../../assets/images/capstone/capstone3.png')} 
                           text='New event page'
                           tags=''
-                          info='This is where the user is sent after clicking the plus button on the main page. They can input an event title and a date which will go into the calendar ont he main page.'
+                          info='This is where the user is sent after clicking the plus button on the main page. They can input an event title and a date which will go into the calendar on the main page.'
                           path=''
                       />
                     </ul>
@@ -74,7 +74,7 @@ function Capstone() {
                           src={require('../../assets/images/capstone/capstone7.png')} 
                           text='Email your clinician'
                           tags=''
-                          info='The user can click on the help button on the main page to get to his page where they can send an email to their doctor via the app and their linked email account.'
+                          info='The user can click on the help button on the main page to get to this page where they are able send an email to their doctor via the app and their linked email account.'
                           path=''
                       />
                     </ul>
