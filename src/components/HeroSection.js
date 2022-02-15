@@ -91,7 +91,7 @@ if(window.innerWidth <= 960){
 }
 
 const pathname = window.location.pathname
-if(pathname === '/'){
+if(pathname === '/website/'){
   const s = setInterval(createFlake, rate);
 
   setTimeout(() => {

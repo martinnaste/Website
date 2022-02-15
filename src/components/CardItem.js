@@ -70,7 +70,7 @@ function CardItem(props) {
                 </a> 
                 }
                 {link === 2 &&
-                <button className='cards-link-button' onClick={handleClick}>
+                <button className='cards-link-button' onClick={props.path === 'none' ? '' : handleClick}>
                     <figure className='item-img-wrap'>
                         <img className='item-img' src={props.src} alt='Project pic'/>
                     </figure>
