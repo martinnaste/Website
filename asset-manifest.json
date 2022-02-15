@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.93f058cb.css",
+    "main.css": "/static/css/main.5744e61d.css",
     "main.js": "/static/js/main.d6b94443.js",
     "static/media/capstone5.png": "/static/media/capstone5.3f64525caed2a1aaabc8.png",
     "static/media/capstone4.png": "/static/media/capstone4.26855b8d670e0280d869.png",
@@ -17,11 +17,11 @@
     "static/media/serv-cli1.png": "/static/media/serv-cli1.b0b731473731afaa3573.png",
     "static/media/fluttericon.png": "/static/media/fluttericon.544bc95df5fb53b3d5da.png",
     "index.html": "/index.html",
-    "main.93f058cb.css.map": "/static/css/main.93f058cb.css.map",
+    "main.5744e61d.css.map": "/static/css/main.5744e61d.css.map",
     "main.d6b94443.js.map": "/static/js/main.d6b94443.js.map"
   },
   "entrypoints": [
-    "static/css/main.93f058cb.css",
+    "static/css/main.5744e61d.css",
     "static/js/main.d6b94443.js"
   ]
 }
