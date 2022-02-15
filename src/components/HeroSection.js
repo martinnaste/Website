@@ -7,19 +7,12 @@ const ICONLIST = ["fab fa-js-square", "fas fa-brackets", "fas fa-code", "fas fa-
                   "fab fa-css3", "fab fa-html5", "fab fa-ethereum", "fab fa-react", "fab fa-python", "fab fa-java"];
 
 function HeroSection() {
-  const [showInfo, setShowInfo] = useState(true);
   const [showShip, setShowShip] = useState(true);
 
   // Styling the initial flake  with animation duration randomness
   const myStyle = {"animationDuration":`${Math.floor((Math.random() * (7+1 -4)) +4)}s`}
 
   const showItems = () => {
-    if(window.innerHeight >= 1030 ){
-      setShowInfo(true)
-    } else {
-      setShowInfo(false)
-    }
-
     if(window.innerWidth >= 960 ){
       setShowShip(true)
     } else {
@@ -44,8 +37,7 @@ function HeroSection() {
         <h1 className='heading'>Martin Nastevski</h1>
         <p className='subheading' id='fewd'>[Front End Web Developer]<i id='icon-fewd'className='fas fa-code'></i></p>
         <p className='subheading' id='be'>[Blockchain Enthusiast]<i id='icon-be'className='fab fa-ethereum'></i></p>
-        {showInfo &&
-          <p id='info'>This is my website portfolio showcasing what I have built, the technologies I have used, and what I am interested in. Please scroll down!</p>}
+        <p id='info'>This is my website portfolio showcasing what I have built, the technologies I have used, and what I am interested in. Please scroll down!</p>
       </div>
       <div className='btns'>
         <a className='btn' href='#projects'>Projects</a>

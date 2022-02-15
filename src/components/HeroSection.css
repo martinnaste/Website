@@ -82,6 +82,27 @@
   z-index: 1;
 }
 
+@media screen and (max-width : 960px)
+{
+  .heading
+  {
+    font-size: 40px;
+    margin-top: 5vh;
+    padding-bottom: 3rem;
+  }
+
+  .subheading {
+    margin-top: 8px;
+    padding-top: 1rem;
+    font-size: 25px;
+  }
+
+  #info {
+    padding-top: 5rem;
+    font-size: 20px;
+  }
+}
+
 #icon-fewd {
   padding-left: 2rem;
   padding-top: 10px;
