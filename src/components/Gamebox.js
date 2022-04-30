@@ -11,6 +11,7 @@ function Gamebox({ clickShip }) {
     const [score, setScore] = useState(0)
 
     let canFire = true;
+    let scoreText = "Score: "
 
     let game = {
         over: false,
@@ -520,7 +521,7 @@ function Gamebox({ clickShip }) {
         <div className='hero-container'>
             <p style={{'backgroundColor':'#14202d', "color":"white", "marginLeft":"10px", "marginTop":"10px"}}>
 				<span>
-					Score:
+					{scoreText}
 				</span>
 				<span id="scoreEl">
 					0
