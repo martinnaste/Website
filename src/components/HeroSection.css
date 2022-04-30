@@ -138,3 +138,17 @@
   left: 5%;
   cursor: pointer;
 }
+
+.ship-container > img.ship-right{
+  position: absolute;
+  bottom: 5.3%;
+  left: 9%;
+  cursor: pointer;
+}
+
+.ship-container > h1.click-me{
+  position: absolute;
+  font-size: 16px;
+  bottom: 5.3%;
+  left: 9%;
+}
