@@ -9,6 +9,7 @@ function Gamebox({ clickShip }) {
 
     const [refresh, setRefresh] = useState(false)
     const [score, setScore] = useState(0)
+    var images = []
 
     let game = {
         over: false,
@@ -23,6 +24,14 @@ function Gamebox({ clickShip }) {
     function refreshGame(){
         setRefresh(!refresh)
     }
+
+    function preload() {
+        for (let i = 0; i < icons.length; i++) {
+            images[i] = new Image()
+			images[i].src = require(`../assets/images/icons/${icons[i]}.png`);
+        }
+    }
+    preload()
 
     useEffect(() => {
         const canvas = document.querySelector('canvas')
@@ -444,7 +453,7 @@ function Gamebox({ clickShip }) {
         setTimeout(() => {
             game.active = true
             animate()
-        }, 1000)
+        }, 500)
 
         window.addEventListener('keydown', ({key}) => {
             //These two conditionals so it doesnt render anything in the switch
