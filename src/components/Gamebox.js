@@ -10,6 +10,8 @@ function Gamebox({ clickShip }) {
     const [refresh, setRefresh] = useState(false)
     const [score, setScore] = useState(0)
 
+    let canFire = true;
+
     let game = {
         over: false,
         active: false
@@ -470,19 +472,25 @@ function Gamebox({ clickShip }) {
                     break;
                 //Shoot
                 case 'k':
-                    projectiles.push(
-                        new Projectile({
-                            position: {
-                                x: player.position.x + player.width / 2,
-                                //change back to y: player.position.y + 20 if using the original ship image 
-                                y: player.position.y
-                            },
-                            velocity: {
-                                x: 0,
-                                y: -5
-                            }
-                        })
-                    )
+                    if (canFire){
+                        canFire = false
+                        projectiles.push(
+                            new Projectile({
+                                position: {
+                                    x: player.position.x + player.width / 2,
+                                    //change back to y: player.position.y + 20 if using the original ship image 
+                                    y: player.position.y
+                                },
+                                velocity: {
+                                    x: 0,
+                                    y: -5
+                                }
+                            })
+                        )
+                        setTimeout(() => {
+                            canFire = true
+                        }, 50)
+                    }
                     break;
                 default:
                     break;
@@ -506,7 +514,7 @@ function Gamebox({ clickShip }) {
                     break;
             }
         })
-    }, [refresh])
+    }, [refresh, canFire])
 
     return (
         <div className='hero-container'>
