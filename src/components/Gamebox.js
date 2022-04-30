@@ -9,7 +9,6 @@ function Gamebox({ clickShip }) {
 
     const [refresh, setRefresh] = useState(false)
     const [score, setScore] = useState(0)
-    // var images = []
 
     let game = {
         over: false,
@@ -25,6 +24,7 @@ function Gamebox({ clickShip }) {
         setRefresh(!refresh)
     }
 
+    //PreLoad all the images so when the game starts we arent stuck without images during the randomiser 
     function preload() {
         for (let i = 0; i < icons.length; i++) {
             const image = new Image()
