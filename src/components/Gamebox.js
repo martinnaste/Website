@@ -12,7 +12,7 @@ function Gamebox({ clickShip }) {
 
     let game = {
         over: false,
-        active: true
+        active: false
     }
 
     function exitGame() {
@@ -440,7 +440,11 @@ function Gamebox({ clickShip }) {
                 setRefresh(!refresh)
             }
         }
-        animate()
+
+        setTimeout(() => {
+            game.active = true
+            animate()
+        }, 1000)
 
         window.addEventListener('keydown', ({key}) => {
             //These two conditionals so it doesnt render anything in the switch
