@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './LeaderboardModal.css';
 
+const API_URL=process.env.API_URL
+
 function LeaderboardModal({score, onClose, resetScore}){
     const [records, setRecords] = useState([]);
     const [nameEmpty, setNameEmpty] = useState(false)
@@ -30,7 +32,7 @@ function LeaderboardModal({score, onClose, resetScore}){
             if (form.name === "" || form.name.trim().length === 0){
                 setNameEmpty(true)
             } else {
-                await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard/add`, {
+                await fetch(`${API_URL}/leaderboard/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -83,7 +85,7 @@ function LeaderboardModal({score, onClose, resetScore}){
 
     useEffect(() => {
         async function getRecords() {
-          const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
+          const response = await fetch(`${API_URL}/leaderboard`);
       
           if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
