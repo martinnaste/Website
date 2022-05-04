@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './LeaderboardModal.css';
+const env = require("dotenv").config();
 
-const API_URL=process.env.API_URL
+const API_URL=env.API_URL
 console.log(API_URL);
 
 function LeaderboardModal({score, onClose, resetScore}){
