@@ -30,7 +30,7 @@ function LeaderboardModal({score, onClose, resetScore}){
             if (form.name === ""){
                 setNameEmpty(true)
             } else {
-                await fetch("http://localhost:5001/leaderboard/add", {
+                await fetch("https://martin-nastevski-website.herokuapp.com/leaderboard/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -84,7 +84,7 @@ function LeaderboardModal({score, onClose, resetScore}){
 
     useEffect(() => {
         async function getRecords() {
-          const response = await fetch(`http://localhost:5001/leaderboard`);
+          const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
       
           if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
