@@ -48,6 +48,8 @@ function LeaderboardModal({score, onClose, resetScore}){
                 resetScore()
             }
             
+        } else {
+            //Fixes the refresh bug with the onSubmit when score is === 0
         }
     }
 
