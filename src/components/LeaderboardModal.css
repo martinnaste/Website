@@ -1,0 +1,134 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    overflow-y: initial !important;
+    color: white;
+}
+
+.modal-content{
+    width: 65%;
+    max-width: 1200px;
+    max-height: 500px;
+    background-color: #14202d;
+    box-shadow: 0 1px 10px #00aeff;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.modal-container {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.modal-header{
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-footer {
+    position: sticky;
+    bottom: 0;
+    border-top: 1px solid white;
+    background-color: #14202d;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.note {
+    padding-bottom: 1%;
+}
+
+.empty-name {
+    padding-top: 1%;
+}
+
+.modal-body {
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.button-submit {
+    margin-top: 6px;
+    background: none;
+	color: inherit;
+	padding: 4px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    border: 1px solid #00aeff;
+    border-radius: 5px;
+}
+
+.button-submit-disable {
+    background: none;
+	color: inherit;
+	padding: 4px;
+	font: inherit;
+	cursor: not-allowed;
+	outline: inherit;
+    border: 1px solid #00aeff;
+    border-radius: 5px;
+}
+
+.button-close {
+    background: none;
+	color: red;
+	padding: 4px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    border: 1px solid #00aeff;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.table-titles {
+    color: #00aeff;
+}
+
+.gold {
+    color: gold;
+}
+
+.silver {
+    color: silver;
+}
+
+.bronze {
+    color: #cd7f32;
+}
+
+.grey {
+    color: grey;
+}

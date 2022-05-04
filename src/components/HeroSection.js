@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { toast } from "react-toastify";
 import '../App.css';
 import Gamebox from './Gamebox';
 import './HeroSection.css';
@@ -24,12 +23,6 @@ function HeroSection() {
   }; 
 
   const play = () => {
-    //This is where I will be implementing [REDACTED]
-    // toast.info("You found [REDACTED]... Stay tuned for something fun!", {
-    //   className: 'toast',
-    //   icon: "🕵️"
-    // });
-
     setShipOn(!shipOn)
     if(shipOn){
       runFlakes();

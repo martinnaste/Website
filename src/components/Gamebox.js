@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
+import LeaderboardModal from './LeaderboardModal'
 import './Gamebox.css'
+import './HeroSection.css'
 
 //Worked through this tutorial https://www.youtube.com/watch?v=MCVU0w73uKI and implemented it within a useEffect().
 //Made some changes to better the game and be relatable to the website overall
@@ -9,6 +11,7 @@ function Gamebox({ clickShip }) {
 
     const [refresh, setRefresh] = useState(false)
     const [score, setScore] = useState(0)
+    const [showModal, setShowModal] = useState(false)
 
     let canFire = true;
     let scoreText = "Score: "
@@ -25,6 +28,10 @@ function Gamebox({ clickShip }) {
 
     function refreshGame(){
         setRefresh(!refresh)
+    }
+
+    function resetScore(){
+        setScore(0)
     }
 
     //PreLoad all the images so when the game starts we arent stuck without images during the randomiser 
@@ -332,7 +339,7 @@ function Gamebox({ clickShip }) {
                     } else {
                         invaderProjectile.update()
                     }
-                    //Projectile hits player - remove the invader projectile, turn the game state to off after 1.5 seconds
+                    //Projectile hits player - remove the invader projectile, turn the game state to off after 2 seconds
                     //destroy the ship and save the score to the global score variable
                     if (invaderProjectile.position.y + invaderProjectile.height >= player.position.y
                         &&
@@ -351,6 +358,11 @@ function Gamebox({ clickShip }) {
                                 object: player
                             })
                             setScore(score)
+                            if (score > 0) {
+                                setTimeout(() => {
+                                    setShowModal(true)
+                                }, 1500)
+                            }
                     } else{
                         invaderProjectile.update()
                     }
@@ -528,9 +540,11 @@ function Gamebox({ clickShip }) {
 				</span>
 			</p>
 			<canvas  />
+            {showModal && <LeaderboardModal score={score} onClose={() => setShowModal(false)} resetScore={resetScore}/>}
             <div className='ship-container'>
                 <img className='ship' src={require("../assets/images/ship-red.png")} alt='ship' onClick={exitGame}></img>
-                <img className='ship-right' src={require("../assets/images/icons/rotate-right-solid.png")} alt='refresh' onClick={refreshGame} width="20" height="20"></img>
+                <img className='refresh' src={require("../assets/images/icons/rotate-right-solid.png")} alt='refresh' onClick={refreshGame} width="20" height="20"></img>
+                <img className='leaderboard' src={require("../assets/images/icons/list-ol-solid.png")} alt='leaderboard' onClick={() => setShowModal(true)} width="20" height="20"></img>
                 <h1 className='help-text'>Move Left : A --- Move Right : D --- Shoot : K</h1>
             </div>
         </div>

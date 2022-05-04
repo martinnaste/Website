@@ -139,10 +139,17 @@
   cursor: pointer;
 }
 
-.ship-container > img.ship-right{
+.ship-container > img.refresh{
   position: absolute;
   bottom: 5.3%;
   left: 9%;
+  cursor: pointer;
+}
+
+.ship-container > img.leaderboard{
+  position: absolute;
+  bottom: 5.3%;
+  left: 12.5%;
   cursor: pointer;
 }
 
