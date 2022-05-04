@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './LeaderboardModal.css';
 
-const API_URL= require(process.env.API_URL)
+const API_URL=process.env.API_URL
+console.log(API_URL);
 
 function LeaderboardModal({score, onClose, resetScore}){
     const [records, setRecords] = useState([]);
