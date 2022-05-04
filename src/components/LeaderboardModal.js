@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './LeaderboardModal.css';
 
-const API_URL = process.env.API_URL;
-
 function LeaderboardModal({score, onClose, resetScore}){
     const [records, setRecords] = useState([]);
     const [nameEmpty, setNameEmpty] = useState(false)
@@ -24,15 +22,15 @@ function LeaderboardModal({score, onClose, resetScore}){
         }    
     }
 
-    async function onSubmit(e) {  
+    async function onSubmit(e) {
+        e.preventDefault();
         if (score > 0){
-            e.preventDefault();
             // When a post request is sent to the create url, we'll add a new record to the database.
             const newPerson = { ...form };
-            if (form.name === ""){
+            if (form.name === "" || form.name.trim().length === 0){
                 setNameEmpty(true)
             } else {
-                await fetch(`${API_URL}/leaderboard/add`, {
+                await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -49,10 +47,7 @@ function LeaderboardModal({score, onClose, resetScore}){
                 onClose()
                 resetScore()
             }
-            
-        } else {
-            //Fixes the refresh bug with the onSubmit when score is === 0
-        }
+        } 
     }
 
     const Record = (props) => (
@@ -88,7 +83,7 @@ function LeaderboardModal({score, onClose, resetScore}){
 
     useEffect(() => {
         async function getRecords() {
-          const response = await fetch(`${API_URL}/leaderboard`);
+          const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
       
           if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
