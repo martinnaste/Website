@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './LeaderboardModal.css';
 
-function LeaderboardModal({score, onClose, resetScore}){
+function LeaderboardModal({score, onClose, resetScore, refreshGame}){
     const [records, setRecords] = useState([]);
     const [nameEmpty, setNameEmpty] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const [form, setForm] = useState({
         name: "",
@@ -20,6 +21,12 @@ function LeaderboardModal({score, onClose, resetScore}){
         if((e.charCode || e.keyCode) === 27){
             onClose()
         }    
+    }
+
+    function refreshModal() {
+        onClose()
+        refreshGame()
+        resetScore()
     }
 
     async function onSubmit(e) {
@@ -44,7 +51,7 @@ function LeaderboardModal({score, onClose, resetScore}){
                 
                 setNameEmpty(false)
                 setForm({ name: "", score: "" });
-                onClose()
+                getRecords()
                 resetScore()
             }
         } 
@@ -81,20 +88,22 @@ function LeaderboardModal({score, onClose, resetScore}){
         }
     }, [])
 
-    useEffect(() => {
-        async function getRecords() {
-          const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
-      
-          if (!response.ok) {
-            const message = `An error occurred: ${response.statusText}`;
+    async function getRecords() {
+        setLoading(true)
+        const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
+    
+        if (!response.ok) {
+            const message = `An error occurred: ${response.statusText}.\nPlease try re-loading the leaderboard!`;
             window.alert(message);
             return;
-          }
-      
-          const loadedRecords = await response.json();
-          setRecords(loadedRecords);
         }
-      
+        setLoading(false)
+    
+        const loadedRecords = await response.json();
+        setRecords(loadedRecords);
+    }
+
+    useEffect(() => {
         getRecords();
       
         return;
@@ -125,7 +134,11 @@ function LeaderboardModal({score, onClose, resetScore}){
                     <div className='modal-body'>
                         <h3 className='note'>Submit your Score below!</h3>
                         <h5 className='note'>Scores submitted with explicit names associated will be removed</h5>
-                        <table>
+                        {loading ? 
+                            <h3>
+                                Loading Data
+                            </h3> :
+                            <table>
                             <thead>
                                 <tr className='table-titles'>
                                     <th>Rank</th>
@@ -134,7 +147,7 @@ function LeaderboardModal({score, onClose, resetScore}){
                                 </tr>
                             </thead>
                             <tbody>{recordList()}</tbody>
-                        </table>
+                        </table>}
                     </div>
                     <div className='modal-footer'>
                         <form className='form'>
@@ -147,10 +160,14 @@ function LeaderboardModal({score, onClose, resetScore}){
                                     onChange={(e) => updateForm({ name: e.target.value })}
                                 />
                             </div>}
-                            <button 
-                                className={score > 0 ? 'button-submit' : 'button-submit-disable'} 
-                                onClick={onSubmit}
-                            >Submit</button>
+                            <div className='submit-refresh'>
+                                <button 
+                                    className={score > 0 ? 'button-submit' : 'button-submit-disable'} 
+                                    onClick={onSubmit}
+                                >Submit</button>
+                                <img className='refresh-modal' src={require("../assets/images/icons/rotate-right-solid.png")} alt='refresh' onClick={refreshModal} width="20" height="20"></img>     
+                            </div>
+                            
                         </form>
                         {nameEmpty && <h5 className='empty-name'>Please submit a name that is not blank</h5>}
                     </div>

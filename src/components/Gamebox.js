@@ -540,7 +540,7 @@ function Gamebox({ clickShip }) {
 				</span>
 			</p>
 			<canvas  />
-            {showModal && <LeaderboardModal score={score} onClose={() => setShowModal(false)} resetScore={resetScore}/>}
+            {showModal && <LeaderboardModal score={score} onClose={() => setShowModal(false)} resetScore={resetScore} refreshGame={refreshGame}/>}
             <div className='ship-container'>
                 <img className='ship' src={require("../assets/images/ship-red.png")} alt='ship' onClick={exitGame}></img>
                 <img className='refresh' src={require("../assets/images/icons/rotate-right-solid.png")} alt='refresh' onClick={refreshGame} width="20" height="20"></img>

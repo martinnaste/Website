@@ -113,6 +113,17 @@
     padding-right: 8px;
 }
 
+.submit-refresh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refresh-modal{
+    cursor: pointer;
+    margin-left: 10%;
+}
+
 .table-titles {
     color: #00aeff;
 }
