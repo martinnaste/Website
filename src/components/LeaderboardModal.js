@@ -93,7 +93,9 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
         const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
     
         if (!response.ok) {
-            const message = `An error occurred: ${response.statusText}.\nPlease try re-loading the leaderboard!`;
+            const message = `An error occurred: ${response.statusText}.
+                            \nHosting service has downtime between 4pm-10pm GMT.
+                            \nPlease try re-loading the leaderboard!`;
             window.alert(message);
             return;
         }
