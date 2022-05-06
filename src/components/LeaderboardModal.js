@@ -60,7 +60,7 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
     const Record = (props) => (
         <tr className={getRecordClass(props.index)}>
           <td>{props.index === records.length - 1 ? 
-                <img src={require('../assets/images/kekw.png')} alt='kekw' width={"20px"} height={"20px"}></img> :
+                <img src={require('../assets/images/kekw.png')} alt={props.index + 1} width={"20px"} height={"20px"}></img> :
                 props.index + 1}</td>
           <td>{props.record.name}</td>
           <td>{props.record.score}</td>
