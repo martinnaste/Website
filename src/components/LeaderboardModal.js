@@ -59,7 +59,9 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
 
     const Record = (props) => (
         <tr className={getRecordClass(props.index)}>
-          <td>{props.index + 1}</td>
+          <td>{props.index === records.length - 1 ? 
+                <img src={require('../assets/images/kekw.png')} alt='kekw' width={"20px"} height={"20px"}></img> :
+                props.index + 1}</td>
           <td>{props.record.name}</td>
           <td>{props.record.score}</td>
         </tr>
@@ -74,8 +76,6 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
             return "bronze"
         } else if (index > 9){
             return "grey"
-        } else if (index === records.length -1){
-            return "kekw"
         } else { 
             return
         }
@@ -107,9 +107,8 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
 
     useEffect(() => {
         getRecords();
-      
         return;
-    }, [records.length]);
+    }, []);
 
     function recordList() {
         const sortedRecords = records.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
