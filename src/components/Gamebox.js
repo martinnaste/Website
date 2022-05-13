@@ -358,11 +358,9 @@ function Gamebox({ clickShip }) {
                                 object: player
                             })
                             setScore(score)
-                            if (score > 0) {
-                                setTimeout(() => {
-                                    setShowModal(true)
-                                }, 1500)
-                            }
+                            setTimeout(() => {
+                                setShowModal(true)
+                            }, 1500)
                     } else{
                         invaderProjectile.update()
                     }
@@ -496,13 +494,13 @@ function Gamebox({ clickShip }) {
                                 },
                                 velocity: {
                                     x: 0,
-                                    y: -5
+                                    y: -5 
                                 }
                             })
                         )
                         setTimeout(() => {
                             canFire = true
-                        }, 50)
+                        }, 200)
                     }
                     break;
                 default:

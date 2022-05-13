@@ -133,7 +133,7 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
                     </div>
                     <div className='modal-body'>
                         <h3 className='note'>Submit your Score below!</h3>
-                        <h5 className='note'>Scores submitted with explicit names associated will be removed</h5>
+                        <h5 className='note'>Scores submitted with explicit names associated or by cheating will be removed</h5>
                         {loading ? 
                             <h3>
                                 Loading Data
