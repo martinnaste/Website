@@ -20,7 +20,7 @@ function Footer() {
                     </div>
                     <div className='text'>
                         <p className="footer-text">
-                            Have a look at the GitHub repo for this site!
+                            Site Repository
                         </p>
                         <a target="_blank" href='https://github.com/martinnaste/martinnaste.github.io' rel="noreferrer"><i id='text-icon-github' className='fab fa-github'/></a>
                     </div>

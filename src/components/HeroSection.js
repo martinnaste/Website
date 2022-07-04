@@ -8,6 +8,7 @@ const ICONLIST = ["fab fa-js-square", "fas fa-code", "fas fa-code-branch", "fab 
 function HeroSection() {
   const [showShip, setShowShip] = useState(true);
   const [shipOn, setShipOn] = useState(false);
+  const [projectsButton, setProjectsButton] = useState(false);
 
   const clickMe = "<--- Click Me!"
 
@@ -15,10 +16,16 @@ function HeroSection() {
   const myStyle = {"animationDuration":`${Math.floor((Math.random() * (7+1 -4)) +4)}s`}
 
   const showItems = () => {
-    if(window.innerWidth >= 960 ){
+    if(window.innerWidth >= 1024 && window.innerHeight >= 800){
       setShowShip(true)
     } else {
       setShowShip(false)
+    }
+
+    if(window.innerHeight >= 850 ){
+      setProjectsButton(true)
+    } else {
+      setProjectsButton(false)
     }
   }; 
 
@@ -32,6 +39,21 @@ function HeroSection() {
   useEffect(() => {
     showItems();
   })
+
+  useEffect(() => {
+    async function getRecords(){
+      const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
+  
+      if (!response.ok) {
+        console.log("Error with loading leaderboard.");
+        return;
+      }
+
+      // const loadedRecords = await response.json();
+      console.log("Loaded the data all good");
+    }
+    getRecords()
+  }, [])
 
   window.addEventListener('resize', showItems);
 
@@ -52,9 +74,9 @@ function HeroSection() {
           <p className='subheading' id='be'>[Blockchain Enthusiast]<i id='icon-be'className='fab fa-ethereum'></i></p>
           <p id='info'>This is my website portfolio showcasing what I have built, the technologies I have used, and what I am interested in. Please scroll down!</p>
         </div>
-        <div className='btns'>
+        {projectsButton && <div className='btns'>
           <a className='btn' href='#projects'>Projects</a>
-        </div>
+        </div> }
         {showShip && <div className='ship-container'>
           <img className='ship' src={require("../assets/images/ship-blue.png")} alt='ship' onClick={play}></img>
           <h1 className='click-me'>{clickMe}</h1>
