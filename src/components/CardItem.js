@@ -11,7 +11,7 @@ function CardItem(props) {
     const linkType = () => {
         if (props.path.includes('http')){
             setLink(1);
-        } else if(props.path === '') {
+        } else if(props.path === '' || props.path === "web3" || props.path === "discord") {
             setLink(2);
         } else {
             setLink(0);
@@ -25,7 +25,15 @@ function CardItem(props) {
     const handleClick = () => {
         if(window.location.pathname !== '/capstone'){
             if(!toast.isActive(toastId.current)){
-                toastId.current = toast.info("This repo is private, feel free to ask me about it!", {
+                var toastInfo = ''
+                if(props.path === "web3"){
+                    toastInfo = "I keep this repo in a seperate from my personal github for cyber hygeine. Please ask me about it!"
+                } else if(props.path === "discord"){
+                    toastInfo = "I keep this repo in a seperate from my personal github because of sensitive info. Please ask me about it!"
+                } else {
+                    toastInfo = "This repo is private, feel free to ask me about it!"
+                }
+                toastId.current = toast.info(toastInfo, {
                     className: 'toast'
                 });
             }
