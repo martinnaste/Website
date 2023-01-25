@@ -37,7 +37,7 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
             if (form.name === "" || form.name.trim().length === 0){
                 setNameEmpty(true)
             } else {
-                await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard/add`, {
+                await fetch(`https://website-server.mpartynec.repl.co/leaderboard/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -90,7 +90,7 @@ function LeaderboardModal({score, onClose, resetScore, refreshGame}){
 
     async function getRecords() {
         setLoading(true)
-        const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
+        const response = await fetch(`https://website-server.mpartynec.repl.co/leaderboard`);
     
         if (!response.ok) {
             const message = `Hosting service has downtime.

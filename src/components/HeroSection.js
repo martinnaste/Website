@@ -42,7 +42,7 @@ function HeroSection() {
 
   useEffect(() => {
     async function getRecords(){
-      const response = await fetch(`https://martin-nastevski-website.herokuapp.com/leaderboard`);
+      const response = await fetch(`https://website-server.mpartynec.repl.co/leaderboard`);
   
       if (!response.ok) {
         console.log("Error with loading leaderboard.");
