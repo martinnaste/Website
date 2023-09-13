@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
+  useNavigate,
 } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Pages/Home";
@@ -15,8 +15,9 @@ import Capstone from "./components/Pages/Capstone";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const navigate = useNavigate();
   const globalNavigateToCapstone = () => {
-    Navigate("/capstone");
+    navigate("/capstone");
   };
 
   window.GLOBALNAVTOCAPSTONE = globalNavigateToCapstone;
