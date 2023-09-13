@@ -8,7 +8,7 @@ function Capstone() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 800);
   }, []);
 
   return (
