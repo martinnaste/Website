@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Capstone from "./components/Pages/Capstone";
+import CapstonePortfolio from "./components/Pages/CapstonePortfolio";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/capstone" element={<Capstone />} />
+          <Route path="/capstoneportfolio" element={<CapstonePortfolio />} />
         </Routes>
         <ToastContainer limit={6} />
         <Footer />
