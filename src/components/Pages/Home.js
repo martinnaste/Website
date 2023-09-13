@@ -12,6 +12,7 @@ function Home() {
   };
 
   window.GLOBALNAVTOCAPSTONE = globalNavigateToCapstone;
+  console.log(window.location.href);
   return (
     <>
       <HeroSection />
