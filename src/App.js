@@ -1,11 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Pages/Home";
 import Footer from "./components/Footer";
@@ -15,13 +10,6 @@ import Capstone from "./components/Pages/Capstone";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  const navigate = useNavigate();
-  const globalNavigateToCapstone = () => {
-    navigate("/capstone");
-  };
-
-  window.GLOBALNAVTOCAPSTONE = globalNavigateToCapstone;
-
   return (
     <div className="App">
       <Router>
