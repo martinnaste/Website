@@ -4,16 +4,17 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <div
+      className="footer-container"
+      style={{
+        display:
+          useLocation().pathname.indexOf("capstoneportfolio") !== -1
+            ? "none"
+            : "block",
+      }}
+    >
       <div className="contact-container">
-        <div
-          style={{
-            display:
-              useLocation().pathname.indexOf("capstoneportfolio") !== -1
-                ? "none"
-                : "block",
-          }}
-        >
+        <div>
           <a href={useLocation().pathname === "/" ? "#" : "/"}>
             <img
               height="120px"
