@@ -10,7 +10,7 @@ function Footer() {
         display:
           useLocation().pathname.indexOf("capstoneportfolio") !== -1
             ? "none"
-            : "block",
+            : "flex",
       }}
     >
       <div className="contact-container">
